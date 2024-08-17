@@ -19,4 +19,9 @@ describe('add should work correctly', () => {
     test('Should throw error when custom delimiter string format is invalid', () => {
         expect(() => add('//;1;2;3;4;5;6')).toThrow();
     });
+
+    test('Should throw error when any of the number is negative', () => {
+        expect(() => add('1,2,-3')).toThrow();
+        expect(() => add('1,2,-35,10,-1')).toThrow();
+    });
 });

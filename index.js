@@ -25,9 +25,24 @@ const add = (numString) => {
     const number = parsedNumber ? parsedNumber.numbers : numString;
     const delimiter = parsedNumber ? RegExp(`${parsedNumber.delimiter}|\n`) : /,|\n/;
 
-    return number.split(delimiter)
-        .map((num) => parseInt(num.trim(), 10))
-        .reduce((prev, current) => prev + current, 0);
+    const negativeNumbers = [];
+
+    const numberList = number.split(delimiter)
+        .map((num) => {
+            const intValue = parseInt(num.trim(), 10);
+
+            if (intValue < 0) {
+                negativeNumbers.push(intValue);
+            }
+
+            return intValue;
+        });
+
+    if (negativeNumbers.length > 0) {
+        throw new Error(`Negative numbers not allowed: ${negativeNumbers.join(', ')}`);
+    }
+
+    return numberList.reduce((prev, current) => prev + current, 0);
 };
 
 module.exports = add;
