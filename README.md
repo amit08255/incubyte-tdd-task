@@ -19,10 +19,6 @@
   </h3>
 </div>
 
-<details>
-<summary>📖 <b>Table of Contents</b></summary>
-<br />
-
 [![-----------------------------------------------------][colored-line]](#-walkthrough)
 
 ## ➤ Walkthrough
