@@ -4,7 +4,7 @@
 const path = require('path');
 
 module.exports = {
-    rootDir: path.join(__dirname, '..'),
+    rootDir: path.join(__dirname, '../dist'),
     verbose: true,
     moduleNameMapper: {},
     coveragePathIgnorePatterns: [
@@ -16,12 +16,11 @@ module.exports = {
         'js',
         'jsx',
         'ts',
-        'tsx',
         'json',
         'node',
     ],
     transform: {
-        '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+        '^.+\\.(js|jsx|ts)$': 'babel-jest',
     },
     testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/dist/'],
 };

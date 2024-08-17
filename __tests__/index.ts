@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const add = require('../index');
+import add from '../index';
 
 describe('add should work correctly', () => {
     test('should return 0 when blank string provided', () => {

@@ -1,4 +1,4 @@
-function parseNumbersWithDelimeter(input) {
+function parseNumbersWithDelimeter(input:string) {
     const regex = /^\/\/(.+?)\n(.*)$/gms;
 
     const match = input.match(regex);
@@ -16,7 +16,7 @@ function parseNumbersWithDelimeter(input) {
     throw new Error(`Invalid input format: ${input}`);
 }
 
-const add = (numString) => {
+const add = (numString:string) => {
     if (!numString) {
         return 0;
     }
@@ -25,7 +25,7 @@ const add = (numString) => {
     const number = parsedNumber ? parsedNumber.numbers : numString;
     const delimiter = parsedNumber ? RegExp(`${parsedNumber.delimiter}|\n`) : /,|\n/;
 
-    const negativeNumbers = [];
+    const negativeNumbers:number[] = [];
 
     const numberList = number.split(delimiter)
         .map((num) => {
@@ -45,4 +45,4 @@ const add = (numString) => {
     return numberList.reduce((prev, current) => prev + current, 0);
 };
 
-module.exports = add;
+export default add;

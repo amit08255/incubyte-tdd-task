@@ -7,6 +7,8 @@
     "transpile": "npx babel ./ --out-dir dist --ignore '/**/*.spec.js','/**/*.test.js','/**/*.jsx','./dist/','./node_modules/','./.next/','./__tests__/','./pages/','./jest.config.js'",
     "lint": "eslint . --ext .jsx,.js,.tsx,.ts",
     "lint-staged": "lint-staged",
+    "build": "tsc --pretty",
+    "pretest": "npm run build",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
