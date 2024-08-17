@@ -3,7 +3,7 @@ const add = (number) => {
         return 0;
     }
 
-    return number.split(',')
+    return number.split(/,|\n/)
         .map((num) => parseInt(num.trim(), 10))
         .reduce((prev, current) => prev + current, 0);
 };

@@ -11,5 +11,6 @@ describe('add should work correctly', () => {
         expect(add('1,4')).toBe(5);
         expect(add('1,2,3')).toBe(6);
         expect(add('1,2,3,4')).toBe(10);
+        expect(add('1,2\n3,4,5\n6')).toBe(21);
     });
 });
