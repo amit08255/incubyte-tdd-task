@@ -23,24 +23,6 @@
 <summary>📖 <b>Table of Contents</b></summary>
 <br />
 
-[![-----------------------------------------------------][colored-line]](#table-of-contents)
-
-## ➤ Table of Contents
-
-* [➤ Walkthrough](#-walkthrough)
-	* [Built With](#built-with)
-	* [File Structure](#file-structure)
-	* [Testing Setup](#testing-setup)
-* [➤ Getting Started](#-getting-started)
-	* [Dependencies](#dependencies)
-	* [Install Node.js](#install-nodejs)
-	* [Check your Node.js installation](#check-your-nodejs-installation)
-	* [Installing](#installing)
-	* [Running the App](#running-the-app)
-	* [Tasks](#tasks)
-* [➤ Design Decisions](#-design-decisions)
-</details>
-
 [![-----------------------------------------------------][colored-line]](#-walkthrough)
 
 ## ➤ Walkthrough
